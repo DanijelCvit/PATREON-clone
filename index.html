@@ -25,64 +25,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patreon</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 1px solid green; */
+      }
       body {
         height: 2000px;
+        font-family: aktiv-grotesk, sans-serif;
+      }
+      /*************************************** NAVBAR ***************************************/
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: white;
+        align-items: center;
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .mobile-container {
+        display: flex;
+        align-items: center;
       }
 
       #nav-desktop {
         display: none;
       }
+
+      #nav-desktop li {
+        display: inline-block;
+      }
       #nav-desktop a {
+        text-decoration: none;
         color: black;
       }
-
-      .navbar-fixed {
-        display: flex;
+      #search {
+        background-color: rgb(245 244 242);
+        border-radius: 9999px;
       }
 
-      .nav-wrapper {
-        display: flex;
+      #search::placeholder {
+        color: #706c64;
       }
 
       .fa-patreon {
         margin-left: 15px;
+        color: rgb(255, 66, 77);
+        font-size: 1.7rem;
       }
 
-      .btn-large.red {
+      .btn {
         border-radius: 9999px;
-        font-size: 0.8rem;
-        font-variant-caps: normal;
+        background-color: rgb(255, 66, 77);
+
+        font-size: 1rem;
+        text-transform: none;
       }
 
+      /*************************************** HEADER ***************************************/
+
+      h1 {
+        font-family: Walsheim, sans-serif;
+        font-weight: 700;
+        color: rgb(255, 66, 77);
+      }
       header img {
         padding: 5.5rem;
       }
 
+      /*************************************** DESKTOP ***************************************/
+
       @media screen and (min-width: 1024px) {
-        .nav-wrapper {
+        .navbar {
           display: flex;
-          justify-content: space-between;
-          border: 1px solid red;
         }
-        nav form {
+
+        .navbar-container {
+          display: flex;
+        }
+        .navbar form {
           padding: 0 10px;
           width: 350px;
           max-height: 40px;
         }
-        #search {
-          background-color: rgb(245 244 242);
-          border-radius: 9999px;
+
+        .btn {
+          text-transform: capitalize;
         }
 
-        #search::placeholder {
-          color: #706c64;
-        }
-
-        .btn-large.red {
-          order: 5;
-        }
-
-        #nav-desktop {
+        .navbar-desktop {
           display: inline-block;
         }
 
@@ -95,44 +133,42 @@
 
   <body>
     <!-- navbar -->
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper white valign-wrapper">
-          <!-- <div class="logo-container"> -->
-          <a href="#"><i class="fab fa-patreon red-text"></i></a>
-          <!-- </div> -->
-          <ul id="nav-desktop">
-            <li><a href="">Product</a></li>
-            <li><a href="">For creators</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Resources</a></li>
-            <li><a href="">Starter kits</a></li>
-          </ul>
+    <div class="navbar">
+      <div class="nav-container">
+        <a href="#"><i class="fab fa-patreon"></i></a>
+        <!-- Desktop menu -->
+        <ul id="nav-desktop">
+          <li><a href="">Product</a></li>
+          <li><a href="">For creators</a></li>
+          <li><a href="">Pricing</a></li>
+          <li><a href="">Resources</a></li>
+          <li><a href="">Starter kits</a></li>
+        </ul>
+        <div class="mobile-container">
           <a href="">Login</a>
-          <a href="" class="btn-large red">Create on Patreon</a>
+          <a href="" class="btn z-depth-0">Create on Patreon</a>
           <a
             href="#"
             data-target="mobile-menu"
-            class="black-text sidenav-trigger"
+            class="black-text sidenav-trigger right"
             ><i class="material-icons">menu</i></a
           >
-          <form>
-            <div class="input-field">
-              <input
-                placeholder="Find a creator"
-                id="search"
-                type="search"
-                required
-              />
-              <label class="label-icon" for="search">
-                <i class="material-icons">search</i>
-              </label>
-            </div>
-          </form>
         </div>
-      </nav>
+      </div>
+      <form>
+        <div class="input-field">
+          <input
+            placeholder="Find a creator"
+            id="search"
+            type="search"
+            required
+          />
+          <label class="label-icon" for="search">
+            <i class="material-icons">search</i>
+          </label>
+        </div>
+      </form>
     </div>
-
     <ul class="sidenav" id="mobile-menu">
       <li><a href="sass.html">Sass</a></li>
       <li><a href="badges.html">Components</a></li>
@@ -143,13 +179,13 @@
     <!-- header -->
     <header class="black">
       <div class="row">
-        <div class="col s12 l6 red-text">
+        <div class="col s12 l6 white-text">
           <h1>Change the way art value</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-            suscipit sequi quae.
+            Let your most passionate fans support your creative work via monthly
+            membership.
           </p>
-          <div class="btn-large red">Get started</div>
+          <div class="btn">Get started</div>
         </div>
         <div class="col s12 l6">
           <img
