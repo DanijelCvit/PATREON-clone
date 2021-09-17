@@ -44,22 +44,23 @@
         background-color: white;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
       }
 
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      .logo {
+        width: 50%;
+        flex-grow: 1;
       }
 
       .mobile-container {
         display: flex;
         align-items: center;
+        justify-content: right;
+        width: 50%;
+        flex-grow: 1;
       }
 
       #nav-desktop {
-        visibility: hidden;
+        display: none;
         flex-grow: 1;
       }
 
@@ -73,7 +74,6 @@
 
       form {
         flex-grow: 1;
-        width: 300px;
       }
       #search {
         background-color: rgb(245 244 242);
@@ -112,24 +112,6 @@
       /*************************************** DESKTOP ***************************************/
 
       @media screen and (min-width: 1024px) {
-        .navbar {
-          display: flex;
-        }
-
-        .nav-container {
-          display: flex;
-          border: 1px solid green;
-        }
-        .navbar form {
-          padding: 0 10px;
-          width: 350px;
-          max-height: 40px;
-        }
-
-        .mobile-container {
-          order: 5;
-        }
-
         .btn {
           text-transform: capitalize;
         }
@@ -149,7 +131,7 @@
     <!-- navbar -->
     <div class="navbar">
       <!-- <div class="nav-container"> -->
-      <a href="#"><i class="fab fa-patreon"></i></a>
+      <a class="logo" href="#"><i class="fab fa-patreon"></i></a>
       <!-- Desktop menu -->
       <ul id="nav-desktop">
         <li><a href="">Product</a></li>
@@ -202,8 +184,9 @@
           <div class="btn">Get started</div>
         </div>
         <div class="col s12 l6">
+          <!-- src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif" -->
           <img
-            src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif"
+            src="http://placeimg.com/640/480/fashion"
             alt=""
             class="responsive-img materialboxed"
           />
