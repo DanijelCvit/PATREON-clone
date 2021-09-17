@@ -37,11 +37,14 @@
       }
       /*************************************** NAVBAR ***************************************/
       .navbar {
+        display: flex;
         position: sticky;
         top: 0;
         z-index: 100;
         background-color: white;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
       }
 
       .nav-container {
@@ -56,7 +59,8 @@
       }
 
       #nav-desktop {
-        display: none;
+        visibility: hidden;
+        flex-grow: 1;
       }
 
       #nav-desktop li {
@@ -65,6 +69,11 @@
       #nav-desktop a {
         text-decoration: none;
         color: black;
+      }
+
+      form {
+        flex-grow: 1;
+        width: 300px;
       }
       #search {
         background-color: rgb(245 244 242);
@@ -107,8 +116,9 @@
           display: flex;
         }
 
-        .navbar-container {
+        .nav-container {
           display: flex;
+          border: 1px solid green;
         }
         .navbar form {
           padding: 0 10px;
@@ -116,12 +126,16 @@
           max-height: 40px;
         }
 
+        .mobile-container {
+          order: 5;
+        }
+
         .btn {
           text-transform: capitalize;
         }
 
-        .navbar-desktop {
-          display: inline-block;
+        #nav-desktop {
+          visibility: visible;
         }
 
         header img {
@@ -134,27 +148,27 @@
   <body>
     <!-- navbar -->
     <div class="navbar">
-      <div class="nav-container">
-        <a href="#"><i class="fab fa-patreon"></i></a>
-        <!-- Desktop menu -->
-        <ul id="nav-desktop">
-          <li><a href="">Product</a></li>
-          <li><a href="">For creators</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Resources</a></li>
-          <li><a href="">Starter kits</a></li>
-        </ul>
-        <div class="mobile-container">
-          <a href="">Login</a>
-          <a href="" class="btn z-depth-0">Create on Patreon</a>
-          <a
-            href="#"
-            data-target="mobile-menu"
-            class="black-text sidenav-trigger right"
-            ><i class="material-icons">menu</i></a
-          >
-        </div>
+      <!-- <div class="nav-container"> -->
+      <a href="#"><i class="fab fa-patreon"></i></a>
+      <!-- Desktop menu -->
+      <ul id="nav-desktop">
+        <li><a href="">Product</a></li>
+        <li><a href="">For creators</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Resources</a></li>
+        <li><a href="">Starter kits</a></li>
+      </ul>
+      <div class="mobile-container">
+        <a href="">Login</a>
+        <a href="" class="btn z-depth-0">Create on Patreon</a>
+        <a
+          href="#"
+          data-target="mobile-menu"
+          class="black-text sidenav-trigger right"
+          ><i class="material-icons">menu</i></a
+        >
       </div>
+      <!-- </div> -->
       <form>
         <div class="input-field">
           <input
