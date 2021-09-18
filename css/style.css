@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+}
+body {
+  /* height: 2000px; */
+  font-family: aktiv-grotesk, sans-serif;
+}
+
+h1 {
+  font-family: Walsheim, sans-serif;
+  font-weight: 700;
+  color: rgb(255, 66, 77);
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+main p {
+  /* text-align: center; */
+}
+
+a {
+  color: white;
+}
+
+/*************************************** NAVBAR ***************************************/
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "left-side right-side"
+    "search search";
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  padding: 0 16px;
+}
+
+.logo {
+  grid-area: logo;
+  /* background-color: orange; */
+}
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  grid-area: left-side;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: right-side;
+  /* background-color: lightpink; */
+}
+
+#nav-desktop {
+  display: none;
+  align-items: center;
+  flex-grow: 1;
+  grid-area: menu-desktop;
+  /* background-color: lightseagreen; */
+}
+
+#nav-desktop li {
+  flex-grow: 1;
+  /* border: 1px solid purple; */
+}
+#nav-desktop a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar form {
+  grid-area: search;
+  /* background-color: lightskyblue; */
+}
+
+#search {
+  background-color: rgb(245 244 242);
+  border-radius: 9999px;
+  /* padding: 8px 12px; */
+}
+
+#search::placeholder {
+  color: #706c64;
+}
+
+.fa-patreon {
+  color: rgb(255, 66, 77);
+  font-size: 1.7rem;
+  padding: 16px 16px 16px 0;
+}
+
+.btn {
+  border-radius: 9999px;
+  background-color: rgb(255, 66, 77);
+
+  font-size: 1rem;
+  text-transform: none;
+}
+
+.hamburger {
+  padding-left: 13.5px;
+}
+
+.login {
+  padding: 0 5.4px 0 16.2px;
+}
+.create {
+  padding: 16px 4.5px 16px 13.5px;
+}
+
+.caron {
+  /* font-size: 2rem; */
+}
+
+/*************************************** HEADER ***************************************/
+header {
+  padding: 60px;
+}
+
+header img {
+  padding: 5.5rem;
+}
+
+header .btn {
+  margin: 20px 0;
+}
+
+/*************************************** FOOTER ***************************************/
+footer .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "logo logo social"
+    "settings . ."
+    "product for-creators ."
+    "resources company ."
+    "copyright . .";
+}
+
+.footer-logo {
+  grid-area: logo;
+}
+.settings div {
+  border: 2px solid white;
+  width: 200px;
+  grid-area: settings;
+  /* font-size: 1rem; */
+}
+
+.list.product {
+  grid-area: product;
+}
+
+.list.for-creators {
+  grid-area: for-creators;
+}
+
+.list.resources {
+  grid-area: resources;
+}
+
+.list.company {
+  grid-area: company;
+}
+.copyright {
+  grid-area: copyright;
+}
+
+.social {
+  grid-area: social;
+}
+
+footer h5 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+/*************************************** DESKTOP ***************************************/
+
+@media screen and (min-width: 1024px) {
+  /* NAVBAR */
+  .navbar {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "left-side search right-side";
+  }
+
+  #nav-desktop {
+    display: flex;
+    /* background-color: lime; */
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* FOOTER */
+  footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "logo logo logo logo logo"
+      "settings product for-creators resources company"
+      "social social social social social"
+      "copyright copyright copyright copyright copyright";
+  }
+}

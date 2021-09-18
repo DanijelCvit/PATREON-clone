@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patreon</title>
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -20,137 +23,37 @@
       href="css/materialize.min.css"
       media="screen,projection"
     />
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patreon</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        /* border: 1px solid green; */
-      }
-      body {
-        height: 2000px;
-        font-family: aktiv-grotesk, sans-serif;
-      }
-      /*************************************** NAVBAR ***************************************/
-      .navbar {
-        display: flex;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background-color: white;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      .logo {
-        width: 50%;
-        flex-grow: 1;
-      }
-
-      .mobile-container {
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        width: 50%;
-        flex-grow: 1;
-      }
-
-      #nav-desktop {
-        display: none;
-        flex-grow: 1;
-      }
-
-      #nav-desktop li {
-        display: inline-block;
-      }
-      #nav-desktop a {
-        text-decoration: none;
-        color: black;
-      }
-
-      form {
-        flex-grow: 1;
-      }
-      #search {
-        background-color: rgb(245 244 242);
-        border-radius: 9999px;
-      }
-
-      #search::placeholder {
-        color: #706c64;
-      }
-
-      .fa-patreon {
-        margin-left: 15px;
-        color: rgb(255, 66, 77);
-        font-size: 1.7rem;
-      }
-
-      .btn {
-        border-radius: 9999px;
-        background-color: rgb(255, 66, 77);
-
-        font-size: 1rem;
-        text-transform: none;
-      }
-
-      /*************************************** HEADER ***************************************/
-
-      h1 {
-        font-family: Walsheim, sans-serif;
-        font-weight: 700;
-        color: rgb(255, 66, 77);
-      }
-      header img {
-        padding: 5.5rem;
-      }
-
-      /*************************************** DESKTOP ***************************************/
-
-      @media screen and (min-width: 1024px) {
-        .btn {
-          text-transform: capitalize;
-        }
-
-        #nav-desktop {
-          visibility: visible;
-        }
-
-        header img {
-          padding: 5.5rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
     <!-- navbar -->
     <div class="navbar">
-      <!-- <div class="nav-container"> -->
-      <a class="logo" href="#"><i class="fab fa-patreon"></i></a>
-      <!-- Desktop menu -->
-      <ul id="nav-desktop">
-        <li><a href="">Product</a></li>
-        <li><a href="">For creators</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="">Resources</a></li>
-        <li><a href="">Starter kits</a></li>
-      </ul>
-      <div class="mobile-container">
-        <a href="">Login</a>
-        <a href="" class="btn z-depth-0">Create on Patreon</a>
+      <div class="left-side">
+        <a class="logo" href="#"><i class="fab fa-patreon"></i></a>
+        <!-- Desktop menu -->
+        <ul id="nav-desktop">
+          <li>
+            <a href="">Product<span class="caron">&caron;</span> </a>
+          </li>
+          <li><a href="">For creators</a></li>
+          <li><a href="">Pricing</a></li>
+          <li><a href="">Resources</a></li>
+          <li><a href="">Starter kits</a></li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <a class="login" href="">Login</a>
+        <div class="create">
+          <a href="" class="btn z-depth-0">Create on Patreon</a>
+        </div>
         <a
           href="#"
           data-target="mobile-menu"
-          class="black-text sidenav-trigger right"
+          class="hamburger black-text sidenav-trigger right"
           ><i class="material-icons">menu</i></a
         >
       </div>
-      <!-- </div> -->
       <form>
         <div class="input-field">
           <input
@@ -174,23 +77,24 @@
 
     <!-- header -->
     <header class="black">
-      <div class="row">
-        <div class="col s12 l6 white-text">
-          <h1>Change the way art value</h1>
-          <p>
-            Let your most passionate fans support your creative work via monthly
-            membership.
-          </p>
-          <div class="btn">Get started</div>
-        </div>
-        <div class="col s12 l6">
-          <!-- src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif" -->
-          <img
-            src="http://placeimg.com/640/480/fashion"
-            alt=""
-            class="responsive-img materialboxed"
-          />
-          <!-- <div class="video-container">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l6 white-text">
+            <h1>Change the way art is valued</h1>
+            <p>
+              Let your most passionate fans support your creative work via
+              monthly membership.
+            </p>
+            <div class="btn"><a href="">Get started</a></div>
+          </div>
+          <div class="col s12 l6">
+            <!-- src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif" -->
+            <img
+              src="http://placeimg.com/640/480/fashion"
+              alt=""
+              class="responsive-img materialboxed"
+            />
+            <!-- <div class="video-container">
             <iframe
               width="853"
               height="480"
@@ -199,43 +103,224 @@
               allowfullscreen
             ></iframe>
           </div> -->
+          </div>
         </div>
       </div>
     </header>
-    <!-- Search  -->
-    <section class="container">
-      <h3>Search the 200,000+ creators on Patreon</h3>
-      <form>
-        <div class="input-field">
-          <input
-            placeholder="Find a creator"
-            id="search"
-            type="search"
-            required
-          />
-          <label class="label-icon" for="search">
-            <i class="material-icons">search</i>
-          </label>
+    <main>
+      <!-- Search  -->
+      <section class="container search">
+        <h2>Search the 200,000+ creators on Patreon</h2>
+        <form>
+          <div class="input-field">
+            <input
+              placeholder="Find a creator"
+              id="search"
+              type="search"
+              required
+            />
+            <label class="label-icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+          </div>
+        </form>
+      </section>
+      <!-- Paragraph -->
+      <section class="container about">
+        <h2>What is Patreon?</h2>
+        <p>
+          On Patreon, you can let your fans become active participants in the
+          work they love by offering them a monthly membership. You give them
+          access to exclusive content, community and insight into your creative
+          process. In exchange, you get the freedom to do your best work and the
+          stability you need to build an independent creative career.
+        </p>
+      </section>
+
+      <!-- Photo grid -->
+      <section class="container">
+        <div class="row">
+          <div class="col s12 l5 offset-l1">
+            <h3>Develop a recurring income stream</h3>
+            <p>
+              Stop rolling the dice of ad revenue and per-stream payouts. Get
+              recurring income through monthly payments from your patrons.
+            </p>
+          </div>
+          <div class="col s12 l6">
+            <img
+              src="http://placeimg.com/640/480/technics"
+              alt=""
+              class="responsive-img"
+            />
+            <p>Mikki Kendall Writer</p>
+            <p>
+              "The reliable monthly income has made it possible for me to spend
+              less time chasing checks and more time creating."
+            </p>
+          </div>
         </div>
-      </form>
-    </section>
-    <!-- Paragraph -->
+        <div class="row">
+          <div class="col s12 l6">
+            <img
+              src="http://placeimg.com/640/480/technics"
+              alt=""
+              class="responsive-img"
+            />
+            <p>Mikki Kendall Writer</p>
+            <p>
+              "The reliable monthly income has made it possible for me to spend
+              less time chasing checks and more time creating."
+            </p>
+          </div>
+          <div class="col s12 l5 offset-l1">
+            <h3>Develop a recurring income stream</h3>
+            <p>
+              Stop rolling the dice of ad revenue and per-stream payouts. Get
+              recurring income through monthly payments from your patrons.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 l5 offset-l1">
+            <h3>Develop a recurring income stream</h3>
+            <p>
+              Stop rolling the dice of ad revenue and per-stream payouts. Get
+              recurring income through monthly payments from your patrons.
+            </p>
+          </div>
+          <div class="col s12 l6">
+            <img
+              src="http://placeimg.com/640/480/technics"
+              alt=""
+              class="responsive-img"
+            />
+            <p>Mikki Kendall Writer</p>
+            <p>
+              "The reliable monthly income has made it possible for me to spend
+              less time chasing checks and more time creating."
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Photo grid -->
+      <!-- Paragraph -->
+      <section class="container">
+        <h2>Who uses Patreon?</h2>
+        <p>
+          If you’re ready to take your work to the next level and willing to
+          open your heart to your audience, Patreon is for you.
+        </p>
+      </section>
+      <!-- List gallery -->
 
-    <!-- Paragraph -->
+      <!-- Paragraph -->
+      <section class="container">
+        <h2>It’s easier than you think</h2>
+        <p>
+          There are many ways to delight your fans and every creator does this
+          in their own way.
+        </p>
+      </section>
+      <!-- Card -->
 
-    <!-- List gallery -->
+      <!-- Three colum articles -->
 
-    <!-- Paragraph -->
-
-    <!-- Card -->
-
-    <!-- Three colum articles -->
-
-    <!-- Paragraph with button -->
-
+      <!-- Paragraph with button -->
+      <section class="container">
+        <h2>Are you ready to take back control?</h2>
+        <p><a class="btn" href="">Get started</a></p>
+      </section>
+    </main>
     <!-- Footer -->
+    <footer class="black white-text">
+      <div class="container">
+        <div class="footer-logo">
+          <a class="logo" href="#"><i class="fab fa-patreon"></i></a>
+        </div>
+        <div class="social">
+          <a class="btn-floating grey darken-3" href=""
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a class="btn-floating grey darken-3" href=""
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a class="btn-floating grey darken-3" href=""
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a class="btn-floating grey darken-3" href=""
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+        <div class="settings">
+          <div>
+            <h5>Language: English (United Kingdom)</h5>
+          </div>
+          <div>
+            <i class="materialize icons white-text">Flag</i>
+            <h5>Netherlands</h5>
+          </div>
+          <div><h5>Currency: USD</h5></div>
+        </div>
+        <div class="list product">
+          <h5>Product</h5>
+          <ul>
+            <li>Lite</li>
+            <li>Pro</li>
+            <li>Premium</li>
+            <li>Pricing</li>
+          </ul>
+        </div>
+        <div class="list for-creators">
+          <h5>For Creators</h5>
+          <ul>
+            <li>Podcasters</li>
+            <li>Video Creators</li>
+            <li>Musicians</li>
+            <li>Visual Artists</li>
+            <li>Writers & Journalists</li>
+            <li>Communities</li>
+            <li>Gaming Creators</li>
+            <li>Non-profits</li>
+            <li>Tutorials and Education</li>
+            <li>Local Businesses</li>
+            <li>Creators-of-all-kinds</li>
+          </ul>
+        </div>
+        <div class="list resources">
+          <h5>Resources</h5>
+          <ul>
+            <li>Blog</li>
+            <li>Patreon U</li>
+            <li>App Directly</li>
+          </ul>
+        </div>
+        <div class="list company">
+          <h5>Company</h5>
+          <ul>
+            <li>About</li>
+            <li>Press</li>
+            <li>Careers</li>
+            <li>Privacy</li>
+            <li>Policy & Terms</li>
+            <li>Privacy Preferences</li>
+            <li>Accessibility</li>
+            <li>Impressum</li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>&copy;Patreon <a href="">Sitemap</a></p>
+          <address>
+            <p>
+              600 Townsend Street, Suite 500 <br />
+              San Francisco, CA 94103 <br />
+              USA <br />
+              Phone: +1 (833) 972-8766
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer>
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
