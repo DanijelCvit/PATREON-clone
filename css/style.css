@@ -5,31 +5,64 @@
   box-sizing: border-box;
   /* border: 1px solid green; */
 }
+
+:root {
+  --color: rgb(255, 66, 77);
+}
 body {
   /* height: 2000px; */
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
-  font-family: Walsheim, sans-serif;
+  /* font-family: Walsheim, sans-serif; */
+  font-family: sans-serif;
   font-weight: 700;
-  color: rgb(255, 66, 77);
+  color: var(--color);
   font-size: 3rem;
 }
 
 h2 {
   text-align: center;
+  font-weight: 700;
+  font-size: 2.625rem;
+  margin: 0;
 }
 
-p {
-  font-size: 1.4rem;
+h3 {
+  color: var(--color);
+  font-size: 1.625rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0.5rem 0;
 }
+
+/* p {
+  font-size: 1.2rem;
+} */
 
 header a,
 footer a {
   color: white;
 }
 
+.container {
+  margin: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.row .col {
+  padding: 0 0.5rem 1rem 0.5rem;
+}
+
+.btn-large a,
+.btn a {
+  color: white;
+}
 /*************************************** NAVBAR ***************************************/
 .navbar {
   display: grid;
@@ -82,13 +115,20 @@ footer a {
 }
 
 .navbar form {
+  position: relative;
+  top: -5px;
   grid-area: search;
-  /* background-color: lightskyblue; */
+}
+
+.navbar form .input-field {
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 #search {
   background-color: rgb(245 244 242);
   border-radius: 9999px;
+  margin-bottom: 0;
   /* padding: 8px 12px; */
 }
 
@@ -97,15 +137,15 @@ footer a {
 }
 
 .fa-patreon {
-  color: rgb(255, 66, 77);
+  color: var(--color);
   font-size: 1.7rem;
   padding: 16px 16px 16px 0;
 }
 
+.btn-large,
 .btn {
   border-radius: 9999px;
-  background-color: rgb(255, 66, 77);
-
+  background-color: var(--color);
   font-size: 1rem;
   text-transform: none;
 }
@@ -116,6 +156,8 @@ footer a {
 
 .login {
   padding: 0 5.4px 0 16.2px;
+  color: black;
+  white-space: nowrap;
 }
 .create {
   padding: 16px 4.5px 16px 13.5px;
@@ -132,20 +174,86 @@ footer a {
 
 /*************************************** HEADER ***************************************/
 header {
-  padding: 60px;
+  background-color: #141518;
+}
+.header-left {
+  padding: 4.5rem 2.5rem 0 2.5rem;
 }
 
-header img {
-  padding: 5.5rem;
+.header-image {
+  position: relative;
+}
+.header-image img {
+  padding: 5.5rem 2.5rem;
 }
 
 header .btn {
   margin: 20px 0;
 }
+
+header p {
+  margin: 1rem 0 1.5rem 0;
+}
+
+header .btn-large {
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+}
+
+.play-button {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 28px);
+  left: calc(50% - 28px);
+}
 /*************************************** MAIN ***************************************/
+
+.search {
+  padding: 6rem 3rem;
+}
+
+.search-button {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.h2-container {
+  padding-bottom: 1rem;
+}
+/* .search h2 {
+  padding: 0 0.5rem;
+} */
+
+.about {
+  padding: 0 3rem;
+}
+
+.about p {
+  padding-bottom: 5rem;
+}
 
 section > p {
   text-align: center;
+
+  color: rgb(36, 30, 18);
+  font-weight: 300;
+  line-height: 2;
+  font-size: 1.35rem;
+}
+
+img ~ p,
+h3 ~ p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+.photo-caption {
+  display: flex;
+  align-items: center;
+}
+.photo-caption i {
+  font-size: 3rem;
+  color: var(--color);
 }
 
 .other-creators img {
@@ -169,7 +277,6 @@ section > p {
 }
 
 .container {
-  /* margin: 0 auto; */
 }
 
 /*************************************** FOOTER ***************************************/

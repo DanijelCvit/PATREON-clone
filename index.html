@@ -3,7 +3,17 @@
   <head>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patreon</title>
+    <title>
+      Best way for artists and creators to get sustainable income and connect
+      with fans | Patreon
+    </title>
+    <!-- fav icomn -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://c5.patreon.com/external/favicon/favicon-32x32.png?v=69kMELnXkB"
+    />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -34,16 +44,26 @@
         <!-- Desktop menu -->
         <ul id="nav-desktop">
           <li>
-            <a href="">Product<span class="caron">&caron;</span> </a>
+            <a href="">Product <i class="material-icons">expand_more</i> </a>
           </li>
-          <li><a href="">For creators</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Resources</a></li>
-          <li><a href="">Starter kits</a></li>
+          <li>
+            <a href=""
+              >For creators <i class="material-icons">expand_more</i></a
+            >
+          </li>
+          <li>
+            <a href="">Pricing<i class="material-icons">expand_more</i></a>
+          </li>
+          <li>
+            <a href="">Resources<i class="material-icons">expand_more</i></a>
+          </li>
+          <li>
+            <a href="">Starter kits<i class="material-icons">expand_more</i></a>
+          </li>
         </ul>
       </div>
       <div class="right-side">
-        <a class="login" href="">Login</a>
+        <a class="login" href="">Log In</a>
         <div class="create">
           <a href="" class="btn z-depth-0">Create on Patreon</a>
         </div>
@@ -55,16 +75,16 @@
         >
       </div>
       <form>
-        <div class="input-field">
-          <input
-            placeholder="Find a creator"
-            id="search"
-            type="search"
-            required
-          />
+        <!-- <div class="input-field">
+          <input placeholder="Placeholder" id="search" type="search" />
           <label class="label-icon" for="search">
             <i class="material-icons">search</i>
           </label>
+        </div> -->
+        <div class="input-field">
+          <!-- <i class="btn material-icons prefix">search</i> -->
+          <input id="search" type="text" />
+          <label class="label-icon" for="search">ampersand</label>
         </div>
       </form>
     </div>
@@ -77,24 +97,29 @@
     </div>
 
     <!-- header -->
-    <header class="black">
+    <header>
       <div class="container">
         <div class="row">
           <div class="col s12 l6 white-text">
-            <h1>Change the way art is valued</h1>
-            <p>
-              Let your most passionate fans support your creative work via
-              monthly membership.
-            </p>
-            <div class="btn"><a href="">Get started</a></div>
+            <div class="header-left">
+              <h1>Change the way art is valued</h1>
+              <p>
+                Let your most passionate fans support your creative work via
+                monthly membership.
+              </p>
+              <div class="btn-large"><a href="">Get started</a></div>
+            </div>
           </div>
-          <div class="col s12 l6">
-            <!-- src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif" -->
+          <div class="col s12 l6 header-image">
+            <div class="play-button btn-floating btn-large">
+              <i class="material-icons">play_arrow</i>
+            </div>
             <img
-              src="http://placeimg.com/640/480/fashion"
+              src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif"
               alt=""
               class="responsive-img materialboxed"
             />
+
             <!-- <div class="video-container">
             <iframe
               width="853"
@@ -111,7 +136,9 @@
     <main>
       <!-- Search  -->
       <section class="container search">
-        <h2>Search the 200,000+ creators on Patreon</h2>
+        <div class="h2-container">
+          <h2>Search the 200,000+ creators on Patreon</h2>
+        </div>
         <form>
           <div class="input-field">
             <input
@@ -125,10 +152,11 @@
             </label>
           </div>
         </form>
+        <div class="btn-large search-button"><a href="">Search</a></div>
       </section>
       <!-- Paragraph -->
       <section class="container about">
-        <h2>What is Patreon?</h2>
+        <div class="h2-container"><h2>What is Patreon?</h2></div>
         <p>
           On Patreon, you can let your fans become active participants in the
           work they love by offering them a monthly membership. You give them
@@ -150,11 +178,19 @@
           </div>
           <div class="col s12 l6">
             <img
-              src="http://placeimg.com/640/480/technics"
+              src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/mikki_kendallhomepageactual-6.png"
               alt=""
               class="responsive-img"
             />
-            <p>Mikki Kendall Writer</p>
+            <div class="photo-caption">
+              <div>
+                <a href="">
+                  <p>Mikki Kendall</p>
+                  <span>Writer</span>
+                </a>
+              </div>
+              <i class="material-icons">chevron_right</i>
+            </div>
             <p>
               "The reliable monthly income has made it possible for me to spend
               less time chasing checks and more time creating."
@@ -207,7 +243,7 @@
 
       <!-- Paragraph -->
       <section class="container">
-        <h2>Who uses Patreon?</h2>
+        <div class="h2-container"><h2>Who uses Patreon?</h2></div>
         <p>
           If you’re ready to take your work to the next level and willing to
           open your heart to your audience, Patreon is for you.
@@ -278,7 +314,7 @@
 
       <!-- Paragraph -->
       <section class="container">
-        <h2>It’s easier than you think</h2>
+        <div class="h2-container"><h2>It’s easier than you think</h2></div>
         <p>
           There are many ways to delight your fans and every creator does this
           in their own way.
@@ -300,7 +336,9 @@
 
       <!-- Three colum articles -->
       <section class="container other-creators">
-        <h2>See how other creators use Patreon</h2>
+        <div class="h2-container">
+          <h2>See how other creators use Patreon</h2>
+        </div>
         <div class="row">
           <div class="col s12 m4">
             <img src="http://placeimg.com/640/480/nature" alt="" />
@@ -346,7 +384,9 @@
 
       <!-- Paragraph with button -->
       <section class="container">
-        <h2>Are you ready to take back control?</h2>
+        <div class="h2-container">
+          <h2>Are you ready to take back control?</h2>
+        </div>
         <p><a class="btn" href="">Get started</a></p>
       </section>
     </main>
