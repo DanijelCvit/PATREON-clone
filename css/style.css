@@ -125,6 +125,11 @@ footer a {
   /* font-size: 2rem; */
 }
 
+#modal1 {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 /*************************************** HEADER ***************************************/
 header {
   padding: 60px;
