@@ -198,6 +198,7 @@ header {
 
 .header-image {
   position: relative;
+  /* border: 1px solid orange; */
 }
 .header-image img {
   padding: 5.5rem 2.5rem;
@@ -222,7 +223,7 @@ header .btn-large {
 .play-button {
   display: flex;
   position: absolute;
-  top: calc(50% - 28px);
+  top: calc(50% - 1rem - 28px);
   left: calc(50% - 28px);
 }
 /*************************************** MAIN ***************************************/
