@@ -328,16 +328,16 @@ h3 ~ p {
 }
 
 .creators-list a {
-  color: rgb(177, 172, 163);
+  color: #b1aca3;
   font-size: 1.55rem;
   font-weight: 700;
   line-height: 1.5;
   margin: 0 0.5rem;
 }
 
+.creators-list li:first-of-type a,
 .creators-list a:hover {
   text-decoration: underline;
-
   color: black;
 }
 

@@ -144,7 +144,9 @@
             >
           </div>
         </form>
-        <div class="btn-large search-button"><a href="">Search</a></div>
+        <div class="btn-large search-button z-depth-0">
+          <a href="">Search</a>
+        </div>
       </section>
       <!-- Paragraph -->
       <section class="container about">
@@ -518,7 +520,6 @@
           outDuration: 0,
           startingTop: "0%",
           endingTop: "0%",
-
           preventScrolling: true,
         });
 
@@ -527,29 +528,57 @@
         let instancesCarousel = M.Carousel.init(carousel, {
           fullWidth: true,
           duration: 0,
-          // indicators: true,
           numVisible: 1,
         });
-        //Start rotating carousel image on load
-        let carouselTimer = setInterval(function () {
-          instancesCarousel.next();
-        }, 5000);
 
-        //Change carousel image to one mouse pointer is on
+        //Function to change color and underline of current list
+        //item to match displayed image in carousel
         let creators = document.querySelectorAll(".creators-list a");
-        for (const elem of creators) {
-          elem.addEventListener("mouseover", function (event) {
-            instancesCarousel.set(event.target.dataset.id);
-            clearInterval(carouselTimer);
-          });
-        }
+        let counter = 1;
+        let changeListItem = function (prev, current) {
+          creators[prev].style.textDecoration = "none";
+          creators[prev].style.color = "#b1aca3";
+          creators[current].style.textDecoration = "underline";
+          creators[current].style.color = "black";
+        };
 
-        //Auto rotate image when no image is selected
+        //Auto scroll the carousel and the corresponding list
+        let autoScrollCarousel = function () {
+          let prev = (counter - 1) % 10;
+          let current = counter % 10;
+          changeListItem(prev, current);
+          instancesCarousel.next();
+          counter++;
+        };
+
+        //Start rotating carousel image on load
+        let carouselTimer = setInterval(autoScrollCarousel, 5000);
+
         for (const elem of creators) {
+          //On mouseover change carousel image to one mouse pointer is on and halt auto scroll
+          elem.addEventListener("mouseover", function (event) {
+            clearInterval(carouselTimer);
+            let prev = (counter - 1) % 10;
+            // console.log(prev);
+
+            let current = parseInt(event.target.dataset.id);
+
+            if (counter !== current) {
+              console.log("prev:" + creators[prev].textContent);
+              console.log("curr:" + creators[current].textContent);
+
+              changeListItem(prev, current);
+            }
+            instancesCarousel.set(current);
+            // counter = current + 1;
+            // console.log(counter);
+          });
+
+          //On mouseout auto scroll to next image
           elem.addEventListener("mouseout", function (event) {
-            carouselTimer = setInterval(function () {
-              instancesCarousel.next();
-            }, 5000);
+            console.log("prev:" + creators[counter - 1].textContent);
+            console.log("curr:" + creators[counter].textContent);
+            carouselTimer = setInterval(autoScrollCarousel, 5000);
           });
         }
 
