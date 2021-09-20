@@ -125,7 +125,18 @@ img {
   margin-bottom: 9px;
 }
 
-#search {
+.label-search span {
+  padding-left: 3rem;
+  background-color: transparent;
+}
+
+.label-search i {
+  position: absolute;
+  padding-left: 1rem;
+}
+
+#main-search,
+#navbar-search {
   background-color: rgb(245 244 242);
   border-radius: 9999px;
   margin-bottom: 0;
@@ -221,6 +232,10 @@ header .btn-large {
 .patreon-who,
 .search {
   padding: 6rem 3rem;
+}
+
+.search h2 {
+  padding-bottom: 2rem;
 }
 
 .search-button {
@@ -350,7 +365,7 @@ footer .container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-areas:
-    "logo logo social"
+    "logo social social"
     "settings settings settings"
     "product for-creators for-creators"
     "resources company company"
@@ -370,6 +385,7 @@ footer .container {
 .settings {
   padding-bottom: 2rem;
   grid-area: settings;
+  max-width: 33.33%;
 }
 .settings button {
   /* border: 2px solid white; */
@@ -379,7 +395,7 @@ footer .container {
   font-size: 1.1rem;
   padding: 0.5rem;
   border-radius: 4px;
-  width: 15%;
+  width: 100%;
   background-color: transparent;
   color: white;
   line-height: 1.8rem;
@@ -437,6 +453,7 @@ footer .grid-item h5 {
 }
 
 .social {
+  text-align: right;
   grid-area: social;
   position: relative;
   right: -12px;
