@@ -185,14 +185,20 @@ img {
 
 #modal-video,
 #modal-menu {
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-#modal-video {
+  transition: 0.2s all;
 }
 
 /*************************************** HEADER ***************************************/
+
+/* Magic number for centering, need to find better
+solution */
+/* #modal-video {
+  padding: 36.5vh 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+} */
+
 header {
   background-color: #141518;
 }
