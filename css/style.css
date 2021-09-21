@@ -93,7 +93,7 @@ img {
   /* background-color: lightpink; */
 }
 
-#nav-desktop {
+.nav-desktop {
   display: none;
   align-items: center;
   flex-grow: 1;
@@ -101,11 +101,11 @@ img {
   /* background-color: lightseagreen; */
 }
 
-#nav-desktop li {
+.nav-desktop li {
   flex-grow: 1;
   /* border: 1px solid purple; */
 }
-#nav-desktop a {
+.nav-desktop a {
   text-decoration: none;
   color: black;
 }
@@ -171,9 +171,15 @@ img {
   color: black;
   white-space: nowrap;
 }
-.create {
-  padding: 16px 4.5px 16px 13.5px;
-  min-width: 200px;
+.create-button {
+  padding-left: 1rem;
+  min-width: 150px;
+}
+
+.create-button a {
+  height: 45px;
+  vertical-align: middle;
+  line-height: 45px;
 }
 
 #modal1 {
@@ -394,6 +400,7 @@ footer .container {
   background-color: transparent;
   color: white;
   line-height: 1.8rem;
+  margin-bottom: 0.5rem;
   /* font-size: 1rem; */
 }
 
@@ -551,16 +558,29 @@ the breakpoint at 601px so I use that one for consistency */
 
 /*************************************** DESKTOP ***************************************/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 993px) {
   /* NAVBAR */
+  .container {
+    width: 85%;
+  }
   .navbar {
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas: "left-side search right-side";
+    align-items: center;
   }
 
-  #nav-desktop {
+  .nav-desktop {
     display: flex;
     /* background-color: lime; */
+  }
+
+  .nav-desktop i {
+    position: relative;
+    top: 7px;
+  }
+
+  .navbar form {
+    top: 8px;
   }
 
   .hamburger {
@@ -568,13 +588,30 @@ the breakpoint at 601px so I use that one for consistency */
   }
 
   /* FOOTER */
+
   footer .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "logo logo logo logo logo"
+      "logo . . . ."
       "settings product for-creators resources company"
-      "social social social social social"
+      "social . . . ."
       "copyright copyright copyright copyright copyright";
+  }
+
+  footer .grid-item {
+    margin-top: 0;
+  }
+  footer {
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  }
+  .settings {
+    max-width: 100%;
+  }
+  .social {
+    text-align: left;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    right: 0;
   }
 }
