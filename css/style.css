@@ -46,11 +46,6 @@ footer a {
   color: white;
 }
 
-.container {
-  margin: 0;
-  width: 100%;
-}
-
 img {
   width: 100%;
 }
@@ -63,6 +58,7 @@ img {
 .btn a {
   color: white;
 }
+
 /*************************************** NAVBAR ***************************************/
 .navbar {
   display: grid;
@@ -177,10 +173,7 @@ img {
 }
 .create {
   padding: 16px 4.5px 16px 13.5px;
-}
-
-.caron {
-  /* font-size: 2rem; */
+  min-width: 200px;
 }
 
 #modal1 {
@@ -360,6 +353,7 @@ h3 ~ p {
 /*************************************** FOOTER ***************************************/
 footer {
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: #141518;
 }
 
 footer .container {
@@ -472,14 +466,86 @@ footer h5 {
 footer p {
   font-size: 1rem;
 }
-/*************************************** TABLET ***************************************/
 
-@media screen and (min-width: 768px) {
+/* Override materialize container width percentage for mobile */
+@media screen and (max-width: 600px) {
   .container {
-    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/*************************************** TABLET ***************************************/
+/* Patreon uses a breakpoint at 768px, but materialize has
+the breakpoint at 601px so I use that one for consistency */
+@media screen and (min-width: 601px) {
+  /* HEADER */
+
+  header .container {
+    width: 100%;
+  }
+
+  header {
+    padding: 2.5rem 0 4.5rem;
+  }
+
+  .header-left h1 {
+    font-size: 4rem;
+    line-height: 1.3;
+    padding-right: 2rem;
+    margin-top: 0;
+  }
+
+  .header img {
+    padding: 4.5rem 2.5rem;
+  }
+
+  /* MAIN */
+  .main-search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-search-container form {
+    flex-grow: 1;
+  }
+
+  .search-button {
+    max-width: 100px;
+    margin-left: 1.1rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  .take-back-control,
+  .other-creators,
+  .easier-you-think,
+  .patreon-who,
+  .search {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .creators-column .creators-list {
+    padding: 0 3rem;
   }
   .creators-list li {
     display: block;
+    text-align: left;
+  }
+  .creators-list a {
+    line-height: 2;
+    font-size: 1.7rem;
+  }
+
+  /* FOOTER */
+  footer .container {
+    width: 100%;
+  }
+
+  .settings button {
+    width: 50%;
   }
 }
 

@@ -137,17 +137,19 @@
         <div class="h2-container">
           <h2>Search the 200,000+ creators on Patreon</h2>
         </div>
-        <form>
-          <div class="input-field">
-            <input id="main-search" type="text" />
-            <label class="label-search" for="search">
-              <i class="material-icons">search</i
-              ><span>Find a creator</span></label
-            >
+        <div class="main-search-container">
+          <form>
+            <div class="input-field">
+              <input id="main-search" type="text" />
+              <label class="label-search" for="search">
+                <i class="material-icons">search</i
+                ><span>Find a creator</span></label
+              >
+            </div>
+          </form>
+          <div class="btn-large search-button z-depth-0">
+            <a href="">Search</a>
           </div>
-        </form>
-        <div class="btn-large search-button z-depth-0">
-          <a href="">Search</a>
         </div>
       </section>
       <!-- Paragraph -->
@@ -264,8 +266,8 @@
         </p>
 
         <!-- Carousel -->
-        <div class="row">
-          <div class="col s12 l6 push-l6">
+        <div class="row valign-wrapper">
+          <div class="col s12 m6 push-m6 creators-column">
             <ul class="creators-list">
               <li><a data-id="0" href="">Podcasters</a></li>
               <li><a data-id="1" href="">Video Creators</a></li>
@@ -279,7 +281,7 @@
               <li><a data-id="9" href="">Creators-of-all-kinds</a></li>
             </ul>
           </div>
-          <div class="col s12 l6 pull-l6">
+          <div class="col s12 m6 pull-m6">
             <div class="carousel carousel-slider">
               <a class="carousel-item" href="#one!"
                 ><img
@@ -417,7 +419,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="black white-text">
+    <footer class="white-text">
       <div class="container">
         <div class="footer-logo">
           <a class="logo" href="#"><i class="fab fa-patreon"></i></a>
