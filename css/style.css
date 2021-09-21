@@ -124,6 +124,7 @@ img {
 .label-search span {
   padding-left: 3rem;
   background-color: transparent;
+  height: 25px;
 }
 
 .label-search i {
@@ -182,9 +183,13 @@ img {
   line-height: 45px;
 }
 
-#modal1 {
+#modal-video,
+#modal-menu {
   min-width: 100vw;
   min-height: 100vh;
+}
+
+#modal-video {
 }
 
 /*************************************** HEADER ***************************************/
@@ -234,6 +239,11 @@ header .btn-large {
   padding: 6rem 3rem;
 }
 
+.take-back-control.container {
+  background-color: #fafbfc;
+  width: 100%;
+}
+
 .search h2 {
   padding-bottom: 2rem;
 }
@@ -246,9 +256,6 @@ header .btn-large {
 .h2-container {
   padding-bottom: 1rem;
 }
-/* .search h2 {
-  padding: 0 0.5rem;
-} */
 
 .about {
   padding: 0 3rem;
@@ -557,7 +564,8 @@ the breakpoint at 601px so I use that one for consistency */
 }
 
 /*************************************** DESKTOP ***************************************/
-
+/* Patreon uses a breakpoint at 1024px, but materialize has
+the breakpoint at 993px so I use that one for consistency */
 @media screen and (min-width: 993px) {
   /* NAVBAR */
   .container {

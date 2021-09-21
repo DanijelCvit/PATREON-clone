@@ -7,7 +7,7 @@
       Best way for artists and creators to get sustainable income and connect
       with fans | Patreon
     </title>
-    <!-- fav icomn -->
+    <!-- favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -40,7 +40,7 @@
     <!-- navbar -->
     <div class="navbar">
       <div class="left-side">
-        <a class="logo" href="#"><i class="fab fa-patreon"></i></a>
+        <a class="logo" href="#"><i class="fab fa-patreon"> </i></a>
         <!-- Desktop menu -->
         <ul class="nav-desktop">
           <li>
@@ -69,7 +69,7 @@
         </div>
         <a
           href="#"
-          data-target="modal1"
+          data-target="modal-menu"
           class="hamburger black-text modal-trigger right"
           ><i class="material-icons">menu</i></a
         >
@@ -77,7 +77,7 @@
       <form>
         <div class="input-field">
           <input id="navbar-search" type="text" />
-          <label class="label-search" for="search">
+          <label class="label-search" for="navbar-search">
             <i class="material-icons">search</i
             ><span>Find a creator</span></label
           >
@@ -85,7 +85,7 @@
       </form>
     </div>
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal-menu" class="modal">
       <div class="modal-content">
         <h4>Modal Header</h4>
         <p>A bunch of text</p>
@@ -107,7 +107,10 @@
             </div>
           </div>
           <div class="col s12 m6 header-image">
-            <div class="play-button btn-floating btn-large">
+            <div
+              class="play-button btn-floating btn-large btn modal-trigger"
+              data-target="modal-video"
+            >
               <i class="material-icons">play_arrow</i>
             </div>
             <!-- src="https://www.vhv.rs/dpng/d/80-802022_16-9-grid-lines-hd-png-download.png" -->
@@ -115,18 +118,23 @@
             <img
               src="https://live-patreon-marketing.pantheonsite.io/wp-content/uploads/2020/12/coe-optimize.gif"
               alt=""
-              class="responsive-img materialboxed"
             />
-
-            <!-- <div class="video-container">
-            <iframe
-              width="853"
-              height="480"
-              src="https://player.vimeo.com/video/399742289"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div> -->
+            <!-- -->
+            <!-- Modal Structure -->
+            <div id="modal-video" class="modal">
+              <div class="modal-content">
+                <h4>Video</h4>
+                <div class="video-container">
+                  <iframe
+                    width="853"
+                    height="480"
+                    src="https://player.vimeo.com/video/399742289"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +149,7 @@
           <form>
             <div class="input-field">
               <input id="main-search" type="text" />
-              <label class="label-search" for="search">
+              <label class="label-search" for="main-search">
                 <i class="material-icons">search</i
                 ><span>Find a creator</span></label
               >
@@ -411,7 +419,7 @@
       </section>
 
       <!-- Paragraph with button -->
-      <section class="container take-back-control">
+      <section class="take-back-control container">
         <div class="h2-container">
           <h2>Are you ready to take back control?</h2>
         </div>
@@ -518,8 +526,18 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         //Hamburger menu (modal)
-        let modal = document.querySelectorAll(".modal");
-        let instancesModal = M.Modal.init(modal, {
+        let modalMenu = document.getElementById("modal-menu");
+        let instancesModal = M.Modal.init(modalMenu, {
+          inDuration: 0,
+          outDuration: 0,
+          startingTop: "0%",
+          endingTop: "0%",
+          preventScrolling: true,
+        });
+
+        //Header video (modal)
+        let modalVideo = document.getElementById("modal-video");
+        let instanceHeaderImage = M.Modal.init(modalVideo, {
           inDuration: 0,
           outDuration: 0,
           startingTop: "0%",
@@ -556,7 +574,7 @@
         };
 
         //Start rotating carousel image on load
-        let carouselTimer = setInterval(autoScrollCarousel, 5000);
+        let carouselTimer = setInterval(autoScrollCarousel, 4000);
 
         for (const elem of creators) {
           //On mouseover change carousel image to one mouse pointer is on and halt auto scroll
@@ -574,20 +592,9 @@
 
           //On mouseout auto scroll to next image
           elem.addEventListener("mouseout", function (event) {
-            carouselTimer = setInterval(autoScrollCarousel, 5000);
+            carouselTimer = setInterval(autoScrollCarousel, 4000);
           });
         }
-
-        //Header video
-        let videoGIF = document.querySelectorAll(".materialboxed");
-        let video = document.querySelector(".video-container");
-
-        let instancesMaterialbox = M.Materialbox.init(videoGIF, {
-          onOpenStart: function () {
-            videoGIF[0] = video;
-            alert(video);
-          },
-        });
       });
     </script>
   </body>
