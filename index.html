@@ -44,18 +44,115 @@
         <!-- Desktop Menu -->
         <ul class="nav-desktop">
           <li>
-            Product
-            <i class="material-icons">expand_more</i>
+            <a class="dropdown-trigger" href="#" data-target="dropdown-product"
+              >Product <i class="material-icons">expand_more</i></a
+            >
+            <!-- Dropdown Product -->
+            <ul id="dropdown-product" class="dropdown-content">
+              <li>
+                <a href="#!"
+                  ><h6>Lite</h6>
+                  <p>
+                    Simple tools to set up recurring support from your fans
+                  </p></a
+                >
+              </li>
+              <li>
+                <a href="#!">
+                  <h6>Pro</h6>
+                  <p>
+                    All the tools to build and grow a thriving membership
+                    business
+                  </p></a
+                >
+              </li>
+              <li class="divider" tabindex="-1"></li>
+              <li>
+                <a href="#!"
+                  ><h6>Premium</h6>
+                  <p>For established creators and creative businesses</p></a
+                >
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="">For creators</a>
+            <a class="dropdown-trigger" href="#" data-target="dropdown-creators"
+              >Product <i class="material-icons">expand_more</i></a
+            >
+            <!-- Dropdown Product -->
+            <ul id="dropdown-creators" class="dropdown-content">
+              <li>
+                <a href=""> <i class="material-icons">mic</i> Podcasters </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">camera</i> Video Creators
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">music_note</i> Musicians
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">brush</i> Visual Artists
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">people</i> Communities
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">edit</i> Writers & Journalists
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">gamepad</i> Gaming Creators
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">favorite</i> Non-profits
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">school</i> Tutorials and Education
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="material-icons">add_location</i> Local Businesses
+                </a>
+              </li>
+              <li>
+                <a href=""> Creators-of-all-kinds </a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="">Pricing</a>
           </li>
           <li>
-            Resources
-            <i class="material-icons">expand_more</i>
+            <a
+              class="dropdown-trigger"
+              href="#"
+              data-target="dropdown-resources"
+              >Resources <i class="material-icons">expand_more</i></a
+            >
+            <!-- Dropdown Product -->
+            <ul id="dropdown-resources" class="dropdown-content">
+              <li><a href=""> Blog </a></li>
+              <li><a href=""> Creator Community </a></li>
+              <li><a href=""> Events </a></li>
+              <li><a href=""> Patreon U </a></li>
+              <li><a href=""> App Directory </a></li>
+              <li><a href=""> Help Centre & FAQ </a></li>
+            </ul>
           </li>
           <li>
             <a href="">Starter kits</a>
@@ -604,6 +701,16 @@
         let collaps = document.querySelector(".collapsible.expandable");
         let instanceCollapsible = M.Collapsible.init(collaps, {
           accordion: false,
+          inDuration: 0,
+          outDuration: 0,
+        });
+
+        //Dropdown menu
+        let dropdown = document.querySelectorAll(".dropdown-trigger");
+        let instancesDropdown = M.Dropdown.init(dropdown, {
+          hover: true,
+          coverTrigger: false,
+          constrainWidth: false,
           inDuration: 0,
           outDuration: 0,
         });

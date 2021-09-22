@@ -94,9 +94,21 @@ img {
   align-items: center;
   flex-grow: 1;
 }
+
 .nav-desktop a {
   text-decoration: none;
   color: black;
+}
+
+#dropdown-product {
+  width: 250px;
+}
+
+#dropdown-resources a,
+#dropdown-creators a,
+#dropdown-product a {
+  color: #241e11;
+  font-size: 1rem;
 }
 
 .navbar form {
