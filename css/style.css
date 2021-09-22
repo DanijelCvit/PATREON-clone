@@ -71,7 +71,7 @@ img {
   top: 0;
   z-index: 100;
   background-color: white;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .logo {
@@ -83,6 +83,7 @@ img {
   align-items: center;
   justify-content: left;
   grid-area: left-side;
+  padding-bottom: 0.5rem;
 }
 
 .right-side {
@@ -90,6 +91,7 @@ img {
   align-items: center;
   justify-content: right;
   grid-area: right-side;
+  padding-bottom: 0.5rem;
   /* background-color: lightpink; */
 }
 
@@ -185,19 +187,50 @@ img {
 
 #modal-video,
 #modal-menu {
-  transition: 0.2s all;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 /*************************************** HEADER ***************************************/
+#modal-video {
+  background-color: black;
+  padding-top: 30rem;
+}
 
-/* Magic number for centering, need to find better
-solution */
-/* #modal-video {
-  padding: 36.5vh 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-} */
+#modal-menu .modal-content {
+  padding: 0 1rem;
+}
+
+#modal-menu .modal-content .section:first-of-type {
+  padding: 0;
+}
+
+#modal-menu .modal-close i {
+  position: relative;
+  top: 5px;
+  right: -3px;
+  float: right;
+  vertical-align: middle;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #2b2518;
+}
+
+#modal-menu .section a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #241e11;
+}
+
+#modal-menu .chevron i {
+  position: relative;
+  right: -5px;
+  text-align: end;
+  font-size: 2.5rem;
+}
 
 header {
   background-color: #141518;
