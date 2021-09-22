@@ -208,12 +208,14 @@ img {
 
 .modal-header > i {
   margin-left: auto;
-  display: inline-block;
+  font-size: 2.5rem;
 }
 
 .collapsible-header i {
   margin-left: auto;
   margin-right: 0;
+  font-weight: 200;
+  font-size: 2rem;
 }
 
 .collapsible {
@@ -222,6 +224,8 @@ img {
 }
 
 .collapsible-header {
+  font-size: 1.2rem;
+
   padding-left: 0;
   padding-right: 0;
 }

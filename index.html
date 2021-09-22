@@ -574,12 +574,21 @@
         });
 
         //Collapsible
-
         let collaps = document.querySelector(".collapsible.expandable");
         let instanceCollapsible = M.Collapsible.init(collaps, {
           accordion: false,
           inDuration: 0,
           outDuration: 0,
+        });
+
+        //Toggle chevron icon when clicking on the collaps element
+        collaps.addEventListener("click", (event) => {
+          let icon = event.target.querySelector(".material-icons");
+          if (icon.textContent == "expand_more") {
+            icon.textContent = "expand_less";
+          } else {
+            icon.textContent = "expand_more";
+          }
         });
 
         //Header video (modal)
