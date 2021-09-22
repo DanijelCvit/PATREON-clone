@@ -177,6 +177,7 @@ img {
 #modal-menu {
   min-width: 100vw;
   min-height: 100vh;
+  background-color: white;
 }
 
 /*************************************** HEADER ***************************************/
@@ -189,11 +190,7 @@ img {
   padding: 0 1rem;
 }
 
-#modal-menu .modal-content .section:first-of-type {
-  padding: 0;
-}
-
-#modal-menu .modal-close i {
+/* #modal-menu .modal-close i {
   position: relative;
   top: 5px;
   right: -3px;
@@ -203,21 +200,30 @@ img {
   font-size: 2.5rem;
   font-weight: 200;
   color: #2b2518;
-}
-
-#modal-menu .section a {
+} */
+.modal-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
-  color: #241e11;
 }
 
-#modal-menu .chevron i {
-  position: relative;
-  right: -5px;
-  text-align: end;
-  font-size: 2.5rem;
+.modal-header > i {
+  margin-left: auto;
+  display: inline-block;
+}
+
+.collapsible-header i {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.collapsible {
+  border-left: 0;
+  border-right: 0;
+}
+
+.collapsible-header {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 header {

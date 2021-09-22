@@ -85,55 +85,52 @@
     <!-- Modal Menu -->
     <div id="modal-menu" class="modal">
       <div class="modal-content">
-        <a href=""><i class="fab fa-patreon"></i></a>
-        <span class="modal-close"><i class="material-icons">close</i> </span>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""
-            ><div>Product</div>
-            <div class="chevron">
-              <i class="material-icons">expand_more</i>
-            </div></a
-          >
+        <div class="modal-header">
+          <a href=""><i class="fab fa-patreon"></i></a>
+          <i class="material-icons modal-close">close</i>
         </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""
-            ><div>For creators</div>
-            <div class="chevron">
-              <i class="material-icons">expand_more</i>
-            </div></a
-          >
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""><div>Pricing</div> </a>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""
-            ><div>Resources</div>
-            <div class="chevron">
-              <i class="material-icons">expand_more</i>
-            </div></a
-          >
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""><div>Starter Kits</div> </a>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""><div>Create on Patreon</div> </a>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""><div>Log In</div> </a>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <a href=""><div>Sign up</div> </a>
-        </div>
+        <ul class="collapsible expandable z-depth-0">
+          <li>
+            <div class="collapsible-header">
+              Product<i class="material-icons">expand_more</i>
+            </div>
+            <div class="collapsible-body">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              For creators<i class="material-icons">expand_more</i>
+            </div>
+            <div class="collapsible-body">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">Pricing</div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              Resources<i class="material-icons">expand_more</i>
+            </div>
+            <div class="collapsible-body">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">Starter kits</div>
+          </li>
+          <li>
+            <div class="collapsible-header">Create on Patreon</div>
+          </li>
+          <li>
+            <div class="collapsible-header">Log In</div>
+          </li>
+          <li>
+            <div class="collapsible-header">Sign up</div>
+            <div class="collapsible-body"></div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -574,6 +571,15 @@
           startingTop: "0%",
           endingTop: "0%",
           preventScrolling: true,
+        });
+
+        //Collapsible
+
+        let collaps = document.querySelector(".collapsible.expandable");
+        let instanceCollapsible = M.Collapsible.init(collaps, {
+          accordion: false,
+          inDuration: 0,
+          outDuration: 0,
         });
 
         //Header video (modal)
