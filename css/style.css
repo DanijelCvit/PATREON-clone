@@ -91,11 +91,12 @@ img {
 }
 
 .nav-desktop li {
-  align-items: center;
   flex-grow: 1;
 }
 
 .nav-desktop a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: black;
 }

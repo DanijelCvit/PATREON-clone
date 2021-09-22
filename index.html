@@ -7,7 +7,7 @@
       Best way for artists and creators to get sustainable income and connect
       with fans | Patreon
     </title>
-    <!-- favicon -->
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <!-- navbar -->
+    <!-- Navbar -->
     <div class="navbar">
       <div class="left-side">
         <a class="logo" href="#"><i class="fab fa-patreon"> </i></a>
@@ -79,7 +79,7 @@
             <a class="dropdown-trigger" href="#" data-target="dropdown-creators"
               >Product <i class="material-icons">expand_more</i></a
             >
-            <!-- Dropdown Product -->
+            <!-- Dropdown For Creators -->
             <ul id="dropdown-creators" class="dropdown-content">
               <li>
                 <a href=""> <i class="material-icons">mic</i> Podcasters </a>
@@ -144,7 +144,7 @@
               data-target="dropdown-resources"
               >Resources <i class="material-icons">expand_more</i></a
             >
-            <!-- Dropdown Product -->
+            <!-- Dropdown Resources -->
             <ul id="dropdown-resources" class="dropdown-content">
               <li><a href=""> Blog </a></li>
               <li><a href=""> Creator Community </a></li>
@@ -190,6 +190,7 @@
         </div>
         <ul class="collapsible expandable z-depth-0">
           <li>
+            <!-- Collapsible Product -->
             <div class="collapsible-header">
               Product<i class="material-icons">expand_more</i>
             </div>
@@ -205,6 +206,7 @@
             </div>
           </li>
           <li>
+            <!-- Collapsible For Creators -->
             <div class="collapsible-header">
               For creators<i class="material-icons">expand_more</i>
             </div>
@@ -228,6 +230,7 @@
             <div class="collapsible-header">Pricing</div>
           </li>
           <li>
+            <!-- Collapsible Resources -->
             <div class="collapsible-header">
               Resources<i class="material-icons">expand_more</i>
             </div>
@@ -258,7 +261,7 @@
       </div>
     </div>
 
-    <!-- header -->
+    <!-- Header -->
     <header>
       <div class="container">
         <div class="row">
@@ -715,7 +718,7 @@
           outDuration: 0,
         });
 
-        //Toggle chevron icon when clicking on the collaps element
+        //Toggle chevron icon up/down when clicking on the collapse element
         collaps.addEventListener("click", (event) => {
           let icon = event.target.querySelector(".material-icons");
           if (icon.textContent == "expand_more") {
