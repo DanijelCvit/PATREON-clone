@@ -75,7 +75,6 @@ img {
   align-items: center;
   justify-content: left;
   grid-area: left-side;
-  padding-bottom: 0.5rem;
 }
 
 .right-side {
@@ -83,17 +82,16 @@ img {
   align-items: center;
   justify-content: right;
   grid-area: right-side;
-  padding-bottom: 0.5rem;
 }
 
 .nav-desktop {
   display: none;
-  align-items: center;
   flex-grow: 1;
   grid-area: menu-desktop;
 }
 
 .nav-desktop li {
+  align-items: center;
   flex-grow: 1;
 }
 .nav-desktop a {
@@ -102,14 +100,13 @@ img {
 }
 
 .navbar form {
+  align-items: center;
   position: relative;
-  top: -5px;
   grid-area: search;
 }
 
 .navbar form .input-field {
-  margin-top: 0;
-  margin-bottom: 9px;
+  margin: 0;
 }
 
 .label-search span {
@@ -183,6 +180,9 @@ img {
 /*************************************** HEADER ***************************************/
 #modal-video {
   background-color: black;
+  /* Magic number. Using display flex interferes with
+  materialize css, couldn't find a way to center the
+  video perfectly */
   padding-top: 30rem;
 }
 
@@ -622,16 +622,15 @@ the breakpoint at 993px so I use that one for consistency */
 
   .nav-desktop {
     display: flex;
-    /* background-color: lime; */
+    align-items: center;
   }
 
-  .nav-desktop i {
-    position: relative;
-    top: 7px;
+  .nav-desktop li {
+    display: flex;
   }
 
-  .navbar form {
-    top: 8px;
+  .nav-desktop .navbar form {
+    top: 4px;
   }
 
   .hamburger {
@@ -639,7 +638,6 @@ the breakpoint at 993px so I use that one for consistency */
   }
 
   /* FOOTER */
-
   footer .container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
