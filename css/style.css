@@ -52,6 +52,12 @@ img {
   color: white;
 }
 
+/* Override valign-wrapper on mobile. Used to center carousel image
+with creator list on tablet and desktop */
+.valign-wrapper {
+  display: block;
+}
+
 /*************************************** NAVBAR ***************************************/
 .navbar {
   display: grid;
@@ -565,8 +571,11 @@ footer p {
 /* Patreon uses a breakpoint at 768px, but materialize has
 the breakpoint at 601px so I use that one for consistency */
 @media screen and (min-width: 601px) {
-  /* HEADER */
+  .valign-wrapper {
+    display: flex;
+  }
 
+  /* HEADER */
   header .container {
     width: 100%;
   }
@@ -614,8 +623,8 @@ the breakpoint at 601px so I use that one for consistency */
     padding-right: 0;
   }
 
-  .creators-column .creators-list {
-    padding: 0 3rem;
+  .creators-list {
+    padding-left: 2rem;
   }
   .creators-list li {
     display: block;
