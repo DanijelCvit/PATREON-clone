@@ -21,6 +21,7 @@
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
       crossorigin="anonymous"
     />
+
     <!--Import Google Icon Font-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -39,6 +40,7 @@
   <body>
     <!-- Navbar -->
     <div class="navbar">
+      <!-- Logo / Desktop Menu -->
       <div class="left-side">
         <a class="logo" href="#"><i class="fab fa-patreon"> </i></a>
         <!-- Desktop Menu -->
@@ -159,6 +161,7 @@
           </li>
         </ul>
       </div>
+      <!-- Search / Log In / Button / Hamburger Menu -->
       <div class="right-side">
         <a class="login" href="">Log In</a>
         <div class="create-button">
@@ -173,11 +176,13 @@
       </div>
       <form>
         <div class="input-field">
-          <input id="navbar-search" type="text" />
-          <label class="label-search" for="navbar-search">
-            <i class="material-icons">search</i
-            ><span>Find a creator</span></label
-          >
+          <input
+            class="fa fab-search"
+            placeholder="&#x20;&#x20;&#xf002; Find a creator"
+            id="navbar-search"
+            type="text"
+          />
+          <label class="label-search" for="navbar-search"></label>
         </div>
       </form>
     </div>
@@ -313,11 +318,12 @@
         <div class="main-search-container">
           <form>
             <div class="input-field">
-              <input id="main-search" type="text" />
-              <label class="label-search" for="main-search">
-                <i class="material-icons">search</i
-                ><span>Find a creator</span></label
-              >
+              <input
+                class="fa fab-search"
+                placeholder="&#x20;&#x20;&#xf002; Find a creator"
+                id="main-search"
+                type="text"
+              />
             </div>
           </form>
           <div class="btn-large search-button z-depth-0">

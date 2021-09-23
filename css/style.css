@@ -118,19 +118,15 @@ img {
   grid-area: search;
 }
 
-.navbar form .input-field {
-  margin: 0;
+.input-field input {
+  font-family: "Font Awesome 5 Free", Arial, Helvetica, sans-serif;
 }
 
-.label-search span {
-  padding-left: 3rem;
-  background-color: transparent;
-  height: 25px;
-}
-
-.label-search i {
-  position: absolute;
-  padding-left: 1rem;
+/* Input color reset */
+input,
+input:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 #main-search,
