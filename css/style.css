@@ -153,6 +153,10 @@ input:focus {
   font-size: 1rem;
   text-transform: none;
 }
+.btn-large:hover,
+.btn:hover {
+  background-color: var(--patreon-color);
+}
 
 .hamburger {
   padding-left: 13.5px;
@@ -169,8 +173,19 @@ input:focus {
   white-space: nowrap;
 }
 .create-button {
-  padding-left: 1rem;
+  margin-left: 1rem;
   min-width: 150px;
+}
+
+.create-button:hover a {
+  background-color: white;
+  color: var(--patreon-color);
+}
+
+.create-button:hover {
+  border-radius: 9999px;
+  box-shadow: 0 0 0 2px var(--patreon-color);
+  transition: 0.1s;
 }
 
 .create-button a {
