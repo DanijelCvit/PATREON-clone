@@ -752,14 +752,10 @@
         let current = 9;
         let next = 0;
         let changeListItem = function () {
-          console.log(current);
-          console.log(next);
           creators[current].style.textDecoration = "none";
           creators[current].style.color = "#b1aca3";
           creators[next].style.textDecoration = "underline";
           creators[next].style.color = "black";
-          console.log(creators[current].textContent);
-          console.log(creators[next].textContent);
         };
 
         //Auto scroll the carousel and the corresponding list
