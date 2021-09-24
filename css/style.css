@@ -126,6 +126,7 @@ with creator list on tablet and desktop */
 
 .input-field input {
   font-family: "Font Awesome 5 Free", Arial, Helvetica, sans-serif;
+  text-indent: 10px;
 }
 
 /* Materialize input color reset */
