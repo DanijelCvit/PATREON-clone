@@ -745,54 +745,62 @@
           preventScrolling: true,
         });
 
+        //Function to change color and underline of next list
+        //item to match displayed image in carousel
+        let creators = document.querySelectorAll(".creators-list a");
+        // let counter = 9;
+        let current = 9;
+        let next = 0;
+        let changeListItem = function () {
+          console.log(current);
+          console.log(next);
+          creators[current].style.textDecoration = "none";
+          creators[current].style.color = "#b1aca3";
+          creators[next].style.textDecoration = "underline";
+          creators[next].style.color = "black";
+          console.log(creators[current].textContent);
+          console.log(creators[next].textContent);
+        };
+
+        //Auto scroll the carousel and the corresponding list
+        let autoScrollCarousel = function () {
+          changeListItem(current, next);
+        };
+
         //Carousel
         let carousel = document.querySelector(".carousel");
         let instancesCarousel = M.Carousel.init(carousel, {
           fullWidth: true,
           duration: 0,
           numVisible: 1,
+          onCycleTo: function () {
+            changeListItem(current, next);
+            current = next;
+            next = ++next % 10;
+          },
         });
 
-        //Function to change color and underline of next list
-        //item to match displayed image in carousel
-        let creators = document.querySelectorAll(".creators-list a");
-        let counter = 0;
-        let changeListItem = function (current, next) {
-          creators[current].style.textDecoration = "none";
-          creators[current].style.color = "#b1aca3";
-          creators[next].style.textDecoration = "underline";
-          creators[next].style.color = "black";
-        };
-
-        //Auto scroll the carousel and the corresponding list
-        let autoScrollCarousel = function () {
-          let current = counter;
-          let next = ++counter % 10;
-          changeListItem(current, next);
-          instancesCarousel.next();
-          counter = counter % 10;
-        };
-
         //Start rotating carousel image on load
-        let carouselTimer = setInterval(autoScrollCarousel, 4000);
+        let carouselTimer = setInterval(() => {
+          instancesCarousel.next();
+        }, 4000);
 
         for (const elem of creators) {
           //On mouseover change carousel image to one mouse pointer is on and halt auto scroll
           elem.addEventListener("mouseover", function (event) {
             clearInterval(carouselTimer);
-            let current = counter;
-            let next = parseInt(event.target.dataset.id);
+            next = parseInt(event.target.dataset.id);
 
-            if (counter !== next) {
-              changeListItem(current, next);
+            if (current !== next) {
               instancesCarousel.set(next);
-              counter = next;
             }
           });
 
           //On mouseout auto scroll to next image
           elem.addEventListener("mouseout", function (event) {
-            carouselTimer = setInterval(autoScrollCarousel, 4000);
+            carouselTimer = setInterval(() => {
+              instancesCarousel.next();
+            }, 4000);
           });
         }
       });
