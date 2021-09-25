@@ -417,6 +417,10 @@ h3 ~ p {
   font-size: 1.4rem;
 }
 
+.other-creators h5 {
+  font-weight: 600;
+}
+
 .other-creators h2 {
   padding-bottom: 2.5rem;
 }
