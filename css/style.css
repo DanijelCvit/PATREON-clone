@@ -222,17 +222,30 @@ input:focus {
 
 /*************************************** HEADER ***************************************/
 
+#modal-video {
+  overflow: hidden;
+}
+
 #modal-video .modal-content {
   background-color: black;
-  padding-bottom: 0;
-  padding-top: 0;
+}
+
+#modal-video button {
+  text-align: end;
+  color: white;
+  background-color: black;
+  border: 0;
+  width: 100%;
+}
+
+#modal-video i {
+  font-size: 3rem;
 }
 
 .modal-content .video-container {
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 3rem);
   align-items: center;
-  overflow: hidden;
 }
 
 #modal-menu .modal-content {
