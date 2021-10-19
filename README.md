@@ -6,4 +6,5 @@ Assignment from HackYourFuture curriculum that recreates the UI of [Patreon webs
 
 [Demo](https://danijelcvit.github.io/PATREON-clone/)
 
-<img src="./assets/patreon.gif" text-align="center">
+<p align="center"><img src="./assets/patreon.gif" >
+</p>
